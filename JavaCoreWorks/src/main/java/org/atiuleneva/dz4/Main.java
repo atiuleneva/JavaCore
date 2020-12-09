@@ -1,4 +1,4 @@
-package org.tiiuleneva.dz4;
+package org.atiuleneva.dz4;
 
 import java.util.ArrayList;
 import java.util.HashMap;
