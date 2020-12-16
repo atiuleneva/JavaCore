@@ -4,14 +4,11 @@ import org.atiuleneva.dz7weather.MainForecast;
 import org.atiuleneva.dz7weather.Weather3Hours;
 import org.atiuleneva.dz7weather.Wind;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.ResultSet;
-import java.sql.Statement;
+import java.sql.*;
 import java.util.ArrayList;
 import java.util.Locale;
 
-public class WeatherDBProvider {
+public class WeatherDBProvider implements DBProvider {
     public void addWeatherRecords(ArrayList<Weather3Hours> list, String city){
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
@@ -81,7 +78,4 @@ public class WeatherDBProvider {
 
         return list;
     }
-
-
-    
 }

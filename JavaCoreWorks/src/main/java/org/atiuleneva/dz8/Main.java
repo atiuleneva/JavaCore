@@ -20,7 +20,8 @@ public class Main {
         String city = scanner.nextLine();
 
         // чтение из MySQL DB
-        WeatherDBProvider provider = new WeatherDBProvider();
+        //WeatherDBProvider provider = new WeatherDBProvider();
+        WeatherDBProviderLite provider = new WeatherDBProviderLite();
         ArrayList<Weather3Hours> weatherFromDB = provider.getWeatherRecords(city);
         System.out.println("ПОГОДА ИЗ ЛОКАЛЬНОЙ БАЗЫ ДАННЫХ:");
         for (Weather3Hours w:weatherFromDB) {
@@ -69,4 +70,5 @@ public class Main {
         // запись в MySQL DB
         provider.addWeatherRecords(list, city);
     }
+
 }
